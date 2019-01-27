@@ -1,0 +1,179 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body, html, #__next, #__next > div, .container, .row {
+  width: 100%;
+  height: 100%;
+}
+
+.container-fluid {
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #009167;
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 15px;
+  background: #FFF;
+  border: 1px solid #EEE;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+hr {
+  height: 1px;
+  background: #EEE;
+  margin: 20px 0;
+  width: 100%;
+  border: 0;
+}
+
+.subtitle {
+  font-family: 'Nunito';
+  font-size: 16px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  font-family: 'Nunito', Helvetica, Arial, sans-serif;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #EEE;
+  margin: 0 -28px;
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+
+.sidebar-header {
+  background: url(/bg.jpg);
+  background-size: cover;
+  height: 80px;
+  background-position: 50% center;
+  margin: 0 -8px 0 -16px;
+}
+
+.radio-button {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 5px;
+  padding: 10px 10px 10px 15px;
+  display: block;
+}
+
+.radio-button:focus {
+  outline: none;
+}
+
+.radio-button.active {
+  background-color: #e5f5f1;
+}
+.radio-button.active:before {
+  transform: rotate(45deg);
+  top: 13px;
+}
+
+.radio-button.active:after {
+  bottom: 14px;
+  transform: rotate(-45deg);
+}
+
+.radio-button.active:before,
+.radio-button.active:after {
+  background: #009369;
+  border-radius: 10%;
+  display: block;
+  height: 3.5px;
+  position: absolute;
+  right: 10px;
+  width: 13px;
+}
+
+.sidebar-logout img {
+  height: 24px;
+  width: 19px;
+  transform: rotatey(180deg);
+}
+
+.sidebar-logout {
+  border: 0;
+  position: relative;
+  top: 15px;
+  left: 0px;
+  height: 40px;
+  width: 40px;
+  border-radius: 0 3px 3px 0;
+  padding: 8px;
+}
+
+@media (min-width: 992px) {
+  .radio-button.active:before,
+  .radio-button.active:after {
+    content: '';
+  }
+  .sidebar-col {
+    box-shadow: 8px 0px 10px -6px rgba(0,0,0,0.1);
+    border-right: 1px solid #EEE;
+    min-height: 100vh;
+  }
+}
+@media (max-width: 992px) {
+  .sticky-inner-wrapper {
+    position: static !important;
+    transform: none !important;
+    width: auto !important;
+  }
+}
+
+.react-tabs__tab-list {
+  margin-top: 20px;
+  border: none;
+}
+
+.react-tabs__tab {
+  border: none;
+  padding: 10px 20px;
+}
+
+.react-tabs__tab--selected {
+  border-bottom: 2px solid #009369;
+}
+
+.analysis-stats [data-highcharts-chart] {
+  margin-top: 25px;
+  margin-bottom: -25px;
+}
+
+.dot-avg:before,
+.dot-max:before,
+.dot-min:before {
+  content: '';
+  height: 30px;
+  width: 1px;
+  border: 0;
+  border-left: 1px solid;
+  background: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.dot-min:before {
+  border-color: red;
+}
+.dot-max:before {
+  border-color: green;
+}
+.dot-avg:before {
+  border-color: rgba(0,0,0,0.4);
+  border-style: dashed;
+}
